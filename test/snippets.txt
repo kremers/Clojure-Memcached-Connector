@@ -1,0 +1,6 @@
+;(with-mc "127.0.0.1:11211"
+;  (set-item "firstkey" entry)
+;  (info (str "Found: " (:task (get-item "firstkey"))))
+;)
+
+;(defonce server (run-netty #'routes {:port 8080 :join? false}))

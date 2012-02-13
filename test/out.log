@@ -1,0 +1,593 @@
+INFO n.spy.memcached.MemcachedConnection - Added {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@198e8b4 (r=false, w=false, c=true, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=8})
+INFO n.spy.memcached.MemcachedConnection - Connection state changed for sun.nio.ch.SelectionKeyImpl@198e8b4
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+INFO clj.memcache - set up connection
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@198e8b4 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 1 Opaque: 1 Key: firstkey Cas: 0 Exp: 0 Flags: 0 Data Length: 65, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 1 Opaque: 1 Key: firstkey Cas: 0 Exp: 0 Flags: 0 Data Length: 65: java.nio.DirectByteBuffer[pos=105 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 1 Opaque: 1 Key: firstkey Cas: 0 Exp: 0 Flags: 0 Data Length: 65
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 105 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@198e8b4 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 1 Opaque: 1 Key: firstkey Cas: 0 Exp: 0 Flags: 0 Data Length: 65, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 1 Opaque: 1 Key: firstkey Cas: 0 Exp: 0 Flags: 0 Data Length: 65 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 1 Opaque: 1 Key: firstkey Cas: 0 Exp: 0 Flags: 0 Data Length: 65 to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0}
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@198e8b4 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 0 Opaque: 2 Key: firstkey, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 2 Key: firstkey: java.nio.DirectByteBuffer[pos=32 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 2 Key: firstkey
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 32 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@198e8b4 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 0 Opaque: 2 Key: firstkey, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 93 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 69 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 2 Key: firstkey and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 2 Key: firstkey to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0}
+INFO clj.core - Found: Buy beer
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@198e8b4 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 10 Opaque: 3, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 10 Opaque: 3: java.nio.DirectByteBuffer[pos=24 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 10 Opaque: 3
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 24 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@198e8b4 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 10 Opaque: 3, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 10 Opaque: 3 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 0, selected 0 keys
+INFO net.spy.memcached.MemcachedClient - Shut down memcached client
+DEBUGn.spy.memcached.MemcachedConnection - Shut down channel java.nio.channels.SocketChannel[closed]
+DEBUGn.spy.memcached.MemcachedConnection - Shut down selector sun.nio.ch.EPollSelectorImpl@29d65b
+
+Testing clj.test.core
+
+Testing clj.test.memcache
+INFO n.spy.memcached.MemcachedConnection - Added {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+INFO clj.memcache - set up connection
+WARN n.spy.memcached.MemcachedConnection - Could not redistribute to another node, retrying primary node for set-item-test.
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 1 Opaque: 4 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10 to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=1, topRop=null, topWop=null, toWrite=0, interested=8}
+WARN n.spy.memcached.MemcachedConnection - Could not redistribute to another node, retrying primary node for set-item-test.
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 5 Key: set-item-test to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=2, topRop=null, topWop=null, toWrite=0, interested=8}
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 8
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@19ccba (r=false, w=false, c=true, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=2, #iq=0, topRop=null, topWop=Cmd: 1 Opaque: 4 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10, toWrite=0, interested=8})
+INFO n.spy.memcached.MemcachedConnection - Connection state changed for sun.nio.ch.SelectionKeyImpl@19ccba
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 1 Opaque: 4 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10: java.nio.DirectByteBuffer[pos=55 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 1 Opaque: 4 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 5 Key: set-item-test: java.nio.DirectByteBuffer[pos=92 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 5 Key: set-item-test
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 92 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@19ccba (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=2, #Wops=0, #iq=0, topRop=Cmd: 1 Opaque: 4 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 62 bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 1 Opaque: 4 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10 and giving the next 38 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 14 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 5 Key: set-item-test and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@19ccba (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 10 Opaque: 6, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 10 Opaque: 6: java.nio.DirectByteBuffer[pos=24 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 10 Opaque: 6
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 24 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@19ccba (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 10 Opaque: 6, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 10 Opaque: 6 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 0, selected 0 keys
+INFO net.spy.memcached.MemcachedClient - Shut down memcached client
+DEBUGn.spy.memcached.MemcachedConnection - Shut down channel java.nio.channels.SocketChannel[closed]
+DEBUGn.spy.memcached.MemcachedConnection - Shut down selector sun.nio.ch.EPollSelectorImpl@1140709
+INFO n.spy.memcached.MemcachedConnection - Added {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+INFO clj.memcache - set up connection
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=false, w=false, c=true, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=8})
+INFO n.spy.memcached.MemcachedConnection - Connection state changed for sun.nio.ch.SelectionKeyImpl@1d9e279
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+INFO n.spy.memcached.MemcachedConnection - Added {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+INFO clj.memcache - set up connection
+WARN n.spy.memcached.MemcachedConnection - Could not redistribute to another node, retrying primary node for set-item-test.
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 1 Opaque: 7 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10 to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=1, topRop=null, topWop=null, toWrite=0, interested=8}
+WARN n.spy.memcached.MemcachedConnection - Could not redistribute to another node, retrying primary node for set-item-test.
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 8 Key: set-item-test to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=2, topRop=null, topWop=null, toWrite=0, interested=8}
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 8
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@9dd6e2 (r=false, w=false, c=true, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=2, #iq=0, topRop=null, topWop=Cmd: 1 Opaque: 7 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10, toWrite=0, interested=8})
+INFO n.spy.memcached.MemcachedConnection - Connection state changed for sun.nio.ch.SelectionKeyImpl@9dd6e2
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 1 Opaque: 7 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10: java.nio.DirectByteBuffer[pos=55 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 1 Opaque: 7 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 8 Key: set-item-test: java.nio.DirectByteBuffer[pos=92 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 8 Key: set-item-test
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 92 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@9dd6e2 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=2, #Wops=0, #iq=0, topRop=Cmd: 1 Opaque: 7 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 62 bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 1 Opaque: 7 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10 and giving the next 38 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 14 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 8 Key: set-item-test and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@9dd6e2 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 10 Opaque: 9, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 10 Opaque: 9: java.nio.DirectByteBuffer[pos=24 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 10 Opaque: 9
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 24 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@9dd6e2 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 10 Opaque: 9, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 10 Opaque: 9 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 0, selected 0 keys
+INFO net.spy.memcached.MemcachedClient - Shut down memcached client
+DEBUGn.spy.memcached.MemcachedConnection - Shut down channel java.nio.channels.SocketChannel[closed]
+DEBUGn.spy.memcached.MemcachedConnection - Shut down selector sun.nio.ch.EPollSelectorImpl@4f0853
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 3 Opaque: 10 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 6, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 3 Opaque: 10 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 6: java.nio.DirectByteBuffer[pos=51 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 3 Opaque: 10 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 6
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 51 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 3 Opaque: 10 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 6, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 3 Opaque: 10 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 6 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 3 Opaque: 10 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 6 to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0}
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 0 Opaque: 11 Key: set-item-test, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 11 Key: set-item-test: java.nio.DirectByteBuffer[pos=37 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 11 Key: set-item-test
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 37 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 0 Opaque: 11 Key: set-item-test, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 34 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 10 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 11 Key: set-item-test and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 11 Key: set-item-test to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0}
+INFO clj.test.memcache - xyz
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 0 Opaque: 12 Key: set-item-test, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 12 Key: set-item-test: java.nio.DirectByteBuffer[pos=37 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 12 Key: set-item-test
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 37 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 0 Opaque: 12 Key: set-item-test, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 34 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 10 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 12 Key: set-item-test and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 12 Key: set-item-test to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0}
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 10 Opaque: 13, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 10 Opaque: 13: java.nio.DirectByteBuffer[pos=24 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 10 Opaque: 13
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 24 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@1d9e279 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 10 Opaque: 13, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 10 Opaque: 13 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 0, selected 0 keys
+INFO net.spy.memcached.MemcachedClient - Shut down memcached client
+DEBUGn.spy.memcached.MemcachedConnection - Shut down channel java.nio.channels.SocketChannel[closed]
+DEBUGn.spy.memcached.MemcachedConnection - Shut down selector sun.nio.ch.EPollSelectorImpl@a22671
+INFO n.spy.memcached.MemcachedConnection - Added {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+INFO clj.memcache - set up connection
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+WARN n.spy.memcached.MemcachedConnection - Could not redistribute to another node, retrying primary node for notAvailable.
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 14 Key: notAvailable to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=1, topRop=null, topWop=null, toWrite=0, interested=8}
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@189f854 (r=false, w=false, c=true, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=1, topRop=null, topWop=null, toWrite=0, interested=8})
+INFO n.spy.memcached.MemcachedConnection - Connection state changed for sun.nio.ch.SelectionKeyImpl@189f854
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@189f854 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 0 Opaque: 14 Key: notAvailable, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 14 Key: notAvailable: java.nio.DirectByteBuffer[pos=36 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 14 Key: notAvailable
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 36 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@189f854 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 0 Opaque: 14 Key: notAvailable, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 33 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 9 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 14 Key: notAvailable and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@189f854 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 10 Opaque: 15, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 10 Opaque: 15: java.nio.DirectByteBuffer[pos=24 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 10 Opaque: 15
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 24 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@189f854 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 10 Opaque: 15, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 10 Opaque: 15 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 0, selected 0 keys
+INFO net.spy.memcached.MemcachedClient - Shut down memcached client
+DEBUGn.spy.memcached.MemcachedConnection - Shut down channel java.nio.channels.SocketChannel[closed]
+DEBUGn.spy.memcached.MemcachedConnection - Shut down selector sun.nio.ch.EPollSelectorImpl@d6c07
+INFO n.spy.memcached.MemcachedConnection - Added {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@12f41a5 (r=false, w=false, c=true, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=8})
+INFO n.spy.memcached.MemcachedConnection - Connection state changed for sun.nio.ch.SelectionKeyImpl@12f41a5
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+INFO clj.memcache - set up connection
+INFO n.spy.memcached.MemcachedConnection - Added {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0} to connect queue
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@192d604 (r=false, w=false, c=true, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=8})
+INFO n.spy.memcached.MemcachedConnection - Connection state changed for sun.nio.ch.SelectionKeyImpl@192d604
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+INFO clj.memcache - set up connection
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 1 Opaque: 16 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10 to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=1, topRop=null, topWop=null, toWrite=0, interested=0}
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 17 Key: set-item-test to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=2, topRop=null, topWop=null, toWrite=0, interested=0}
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@192d604 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=2, #iq=0, topRop=null, topWop=Cmd: 1 Opaque: 16 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 1 Opaque: 16 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10: java.nio.DirectByteBuffer[pos=55 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 1 Opaque: 16 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 17 Key: set-item-test: java.nio.DirectByteBuffer[pos=92 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 17 Key: set-item-test
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 92 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@192d604 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=2, #Wops=0, #iq=0, topRop=Cmd: 1 Opaque: 16 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 62 bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.StoreOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 1 Opaque: 16 Key: set-item-test Cas: 0 Exp: 0 Flags: 0 Data Length: 10 and giving the next 38 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 14 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 17 Key: set-item-test and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@192d604 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 10 Opaque: 18, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 10 Opaque: 18: java.nio.DirectByteBuffer[pos=24 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 10 Opaque: 18
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 24 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@192d604 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 10 Opaque: 18, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 10 Opaque: 18 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 0, selected 0 keys
+INFO net.spy.memcached.MemcachedClient - Shut down memcached client
+DEBUGn.spy.memcached.MemcachedConnection - Shut down channel java.nio.channels.SocketChannel[closed]
+DEBUGn.spy.memcached.MemcachedConnection - Shut down selector sun.nio.ch.EPollSelectorImpl@5cc942
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@12f41a5 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 4 Opaque: 19 Key: set-item-test Cas: 0, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.DeleteOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 4 Opaque: 19 Key: set-item-test Cas: 0: java.nio.DirectByteBuffer[pos=37 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.DeleteOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 4 Opaque: 19 Key: set-item-test Cas: 0
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 37 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@12f41a5 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 4 Opaque: 19 Key: set-item-test Cas: 0, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.DeleteOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.DeleteOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.DeleteOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 4 Opaque: 19 Key: set-item-test Cas: 0 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 4 Opaque: 19 Key: set-item-test Cas: 0 to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0}
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@12f41a5 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 0 Opaque: 20 Key: set-item-test, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 0 Opaque: 20 Key: set-item-test: java.nio.DirectByteBuffer[pos=37 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 0 Opaque: 20 Key: set-item-test
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 37 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@12f41a5 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 0 Opaque: 20 Key: set-item-test, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 33 bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Reading 9 payload bytes
+DEBUGn.s.m.p.binary.GetOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 0 Opaque: 20 Key: set-item-test and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Added Cmd: 0 Opaque: 20 Key: set-item-test to {QA sa=/127.0.0.1:11211, #Rops=0, #Wops=0, #iq=0, topRop=null, topWop=null, toWrite=0, interested=0}
+DEBUGn.spy.memcached.MemcachedConnection - No selectors ready, interrupted: false
+DEBUGn.spy.memcached.MemcachedConnection - Handling queue
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 4
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@12f41a5 (r=false, w=true, c=false, op={QA sa=/127.0.0.1:11211, #Rops=0, #Wops=1, #iq=0, topRop=null, topWop=Cmd: 10 Opaque: 21, toWrite=0, interested=4})
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITE_QUEUED to WRITING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - After copying stuff from Cmd: 10 Opaque: 21: java.nio.DirectByteBuffer[pos=24 lim=16384 cap=16384]
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from WRITING to READING
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Finished writing Cmd: 10 Opaque: 21
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Wrote 24 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 1
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 1, selected 1 keys
+DEBUGn.spy.memcached.MemcachedConnection - Handling IO for:  sun.nio.ch.SelectionKeyImpl@12f41a5 (r=true, w=false, c=false, op={QA sa=/127.0.0.1:11211, #Rops=1, #Wops=0, #iq=0, topRop=Cmd: 10 Opaque: 21, topWop=null, toWrite=0, interested=1})
+DEBUGn.spy.memcached.MemcachedConnection - Read 24 bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 24 header bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Reading 0 payload bytes
+DEBUGn.s.m.p.binary.NoopOperationImpl - Transitioned state from READING to COMPLETE
+DEBUGn.spy.memcached.MemcachedConnection - Completed read op: Cmd: 10 Opaque: 21 and giving the next 0 bytes
+DEBUGn.s.m.p.b.BinaryMemcachedNodeImpl - Setting interested opts to 0
+DEBUGn.spy.memcached.MemcachedConnection - Done dealing with queue.
+DEBUGn.spy.memcached.MemcachedConnection - Selecting with delay of 0ms
+DEBUGn.spy.memcached.MemcachedConnection - Selected 0, selected 0 keys
+INFO net.spy.memcached.MemcachedClient - Shut down memcached client
+DEBUGn.spy.memcached.MemcachedConnection - Shut down channel java.nio.channels.SocketChannel[closed]
+DEBUGn.spy.memcached.MemcachedConnection - Shut down selector sun.nio.ch.EPollSelectorImpl@19c4091
+
+Ran 6 tests containing 6 assertions.
+0 failures, 0 errors.
