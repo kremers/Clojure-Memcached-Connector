@@ -28,36 +28,36 @@
     [mchosts func]
     (let [^MemcachedClient con (get-connection mchosts)]
       (debug "set up new connection")
-      (Thread/sleep 2) ; fix to workaround bug #...
+      (Thread/sleep 5) ; fix to workaround bug #...
       (binding [*db* (assoc *db* :connection con :level 0)]
       (try (func) (finally (.shutdown con 5 TimeUnit/SECONDS))))))
 
 
-(defn get-item
+(defn cget
   "Retrieves an item from a specific queue.
    If the item does not exist, nil is returned"
   [qname]
   (try (read-string(.get (find-connection) (str qname)))
    (catch NullPointerException e nil)))
 
-(defn set-item
+(defn cset
   "Adds an item to a specific queue"
   [ queue-name data & {:keys [timeout] :or {timeout 0}}]
   (.set (find-connection) queue-name timeout (str (binding [*print-dup* true] (prn-str data)))))
 
-(defn delete-item
+(defn cdelete
   "removes item"
   [qname]
   (.delete (find-connection) qname))
 
-(defn replace-item 
+(defn creplace 
   "replaces item" 
   [key value & {:keys [timeout] :or {timeout 0}}] 
-  (let [replaceFuture (.replace (find-connection) key timeout (binding [*print-dup* true] (prn-str value)))] (if (= false (.get replaceFuture)) (set-item key value) replaceFuture)))
+  (let [replaceFuture (.replace (find-connection) key timeout (binding [*print-dup* true] (prn-str value)))] (if (= false (.get replaceFuture)) (cset key value) replaceFuture)))
 
 ;  (if false (.get(.replace (find-connection) key timeout (binding [*print-dup* true] (prn-str value))) (set-item key value) true))
 
-(defn get-stats
+(defn cstats
   "gets the stats for the queues"
   []
 

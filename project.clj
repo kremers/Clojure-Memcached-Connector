@@ -19,6 +19,7 @@
    :java-source-path "jsrc"
    :ring {:handler clojurestack.core/routes}
    :properties { :project.build.sourceEncoding "UTF-8" }
+   
 )
 
 

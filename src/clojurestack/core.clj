@@ -12,10 +12,10 @@
 (def db-nodes "127.0.0.1:11211")
 (defrecord todo [task open created])
 (defn make-404 [req] (response (str "404\n---\nCeci n'est pas une 404")))
-(defn get-todos [] (with-mc db-nodes (get-item "todos")))
+(defn get-todos [] (with-mc db-nodes (cget "todos")))
 
 (defmacro with-req-body [[binding] req & body] `(with-open [r# (~req :body)] (let [~binding (BufferedReader. (InputStreamReader. r#))] ~@body)))
-(defn save-todo [name] (let [todos (get-todos) entry (todo. name true (gen-timestamp)) x (conj todos entry)] (with-mc db-nodes (replace-item "todos" x)) entry))
+(defn save-todo [name] (let [todos (get-todos) entry (todo. name true (gen-timestamp)) x (conj todos entry)] (with-mc db-nodes (creplace "todos" x)) entry))
 (defn save-todo-from-req [req] (save-todo (:name (first (seq (with-req-body [buf] req (parsed-seq buf true)))))))  
 
 ; To fix issues that appear for Jetty (not Netty) with UTF-8 responses

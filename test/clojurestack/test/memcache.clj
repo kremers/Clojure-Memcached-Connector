@@ -4,29 +4,29 @@
 
 (def testdb "127.0.0.1:11211")
 
-(deftest set-item
+(deftest cset
   (test/with-mc testdb
-    (test/set-item "set-item-test" "example")
-    (is (= (test/get-item "set-item-test") "example"))  
+    (test/cset "set-item-test" "example")
+    (is (= (test/cget "set-item-test") "example"))  
   ))
 
-(deftest get-item
+(deftest cget
   (test/with-mc testdb
-    (is (= nil (test/get-item "notAvailable")))
+    (is (= nil (test/cget "notAvailable")))
     ))
 
 
-(deftest delete-item
+(deftest cdelete
   (test/with-mc testdb
-    (set-item)
-    (test/delete-item "set-item-test")
-    (is (= nil (test/get-item "set-item-test")))
+    (cset)
+    (test/cdelete "set-item-test")
+    (is (= nil (test/cget "set-item-test")))
   ))
 
-(deftest replace-item
+(deftest creplace
   (test/with-mc testdb
-    (set-item)
-    (test/replace-item "set-item-test" "xyz")
-    (is (= (test/get-item "set-item-test") "xyz"))))
+    (cset)
+    (test/creplace "set-item-test" "xyz")
+    (is (= (test/cget "set-item-test") "xyz"))))
 
 ; Todo - nil handling
