@@ -2,7 +2,8 @@
   (:refer-clojure :exclude [extend])
   (:import (net.spy.memcached MemcachedClient BinaryConnectionFactory AddrUtil)
            (java.net InetSocketAddress)
-	   (java.util.concurrent TimeUnit))
+	   (java.util.concurrent TimeUnit)
+           (java.util UUID))
   (:use [clj-time.core]
         [clj-time.format]
         [clojure.tools.logging :only (info error debug)])
@@ -31,7 +32,6 @@
       (Thread/sleep 5) ; fix to workaround bug #...
       (binding [*db* (assoc *db* :connection con :level 0)]
       (try (func) (finally (.shutdown con 5 TimeUnit/SECONDS))))))
-
 
 (defn cget
   "Retrieves an item from a specific queue.
@@ -63,4 +63,16 @@
 
   (let [stats (.getStats (find-connection))]
     (into '{} (for [[k v] stats] [k (into '{} v)]))))
+
+; Now add connection management functinality
+(defn uuid []  (.toString (UUID/randomUUID)) )
+
+(defn cadd
+  "Adds an item to a collection, if the collection does not exist create and append. 
+  The collections ('buckets') are managed with a root node and leafs for the entries.
+  Leaf and root nodes does not have any kind of timeout."
+  [bucket value]
+  (let [leafkey (str bucket "_" (uuid)) node (cset leafkey value)] (if-let [current (cget bucket)] (creplace bucket (conj current leafkey)) (cset bucket [leafkey])))
+)
+
 
