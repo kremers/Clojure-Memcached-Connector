@@ -55,8 +55,6 @@
   [key value & {:keys [timeout] :or {timeout 0}}] 
   (let [replaceFuture (.replace (find-connection) key timeout (binding [*print-dup* true] (prn-str value)))] (if (= false (.get replaceFuture)) (cset key value) replaceFuture)))
 
-;  (if false (.get(.replace (find-connection) key timeout (binding [*print-dup* true] (prn-str value))) (set-item key value) true))
-
 (defn cstats
   "gets the stats for the queues"
   []
@@ -74,5 +72,7 @@
   [bucket value]
   (let [leafkey (str bucket "_" (uuid)) node (cset leafkey value)] (if-let [current (cget bucket)] (creplace bucket (conj current leafkey)) (cset bucket [leafkey])))
 )
+
+(defn cgetall "Read the full collection" [bucket] (let [nodes (cget bucket)] (.getBulk (find-connection) nodes)))
 
 
