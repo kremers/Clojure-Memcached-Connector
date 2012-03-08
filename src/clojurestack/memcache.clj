@@ -65,8 +65,8 @@
   (let [leafkey (str bucket "_" (uuid)) node (cset leafkey value)] (if-let [current (cget bucket)] (creplace bucket (conj current leafkey)) (cset bucket [leafkey])))
 )
 
-(defn cfindkey "Finds a key for a stored collection value" [bucket item] (keys (filter #(= item (read-string (val %))) (with-mc db-nodes (cgetmap bucket)))))
 (defn cgetmap "Reads full collection as map" [bucket] (let [nodes (cget bucket)] (.getBulk (find-connection) nodes)))
+(defn cfindkey "Finds a key for a stored collection value" [bucket item] (keys (filter #(= item (read-string (val %))) (with-mc (find-connection) (cgetmap bucket)))))
 (defn cgetall "Reads the full collection" [bucket] (map read-string (vals (cgetmap bucket))))
 (defn csize "Returns the size of a collection" [bucket] (count (cget bucket)))
 (defn cdeleteall "Removes from collection including head node" [bucket] (doseq [f (doall (map #(.delete (find-connection) %) (conj (cget bucket) bucket)))] (.get f)))
