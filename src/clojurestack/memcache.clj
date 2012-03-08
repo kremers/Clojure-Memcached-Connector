@@ -14,10 +14,7 @@
 (def ^{:dynamic true} *db* {:connection nil :level 0})
 (defn get-connection [mchosts] (MemcachedClient. (BinaryConnectionFactory.) (AddrUtil/getAddresses mchosts)))
 (defn gen-timestamp [] (clj-time.format/unparse (formatters :date-hour-minute-second) (now)))
-
-(defn find-connection
-  "Returns the current database connection (or nil if there is none)"
-  [] (:connection *db*))
+(defn find-connection "Returns the current database connection (or nil if there is none)"  [] (:connection *db*))
 
 (defmacro with-mc
   "Macro to manage the Memcached Session"
@@ -40,29 +37,24 @@
   (try (read-string(.get (find-connection) (str qname)))
    (catch NullPointerException e nil)))
 
-(defn cset
-  "Adds an item to a specific queue"
+(defn cset "Adds an item to a specific queue"
   [ queue-name data & {:keys [timeout] :or {timeout 0}}]
   (.set (find-connection) queue-name timeout (str (binding [*print-dup* true] (prn-str data)))))
 
-(defn cdelete
-  "removes item"
+(defn cdelete "removes item"
   [qname]
   (.delete (find-connection) qname))
 
-(defn creplace 
-  "replaces item" 
+(defn creplace "replaces item" 
   [key value & {:keys [timeout] :or {timeout 0}}] 
   (let [replaceFuture (.replace (find-connection) key timeout (binding [*print-dup* true] (prn-str value)))] (if (= false (.get replaceFuture)) (cset key value) replaceFuture)))
 
 (defn cstats
-  "gets the stats for the queues"
-  []
-
+  "gets the stats for the queues" []
   (let [stats (.getStats (find-connection))]
     (into '{} (for [[k v] stats] [k (into '{} v)]))))
 
-; Now add connection management functinality
+; Now add collection management functinality
 (defn uuid []  (.toString (UUID/randomUUID)) )
 
 (defn cadd
@@ -73,6 +65,12 @@
   (let [leafkey (str bucket "_" (uuid)) node (cset leafkey value)] (if-let [current (cget bucket)] (creplace bucket (conj current leafkey)) (cset bucket [leafkey])))
 )
 
-(defn cgetall "Read the full collection" [bucket] (let [nodes (cget bucket)] (.getBulk (find-connection) nodes)))
+(defn cfindkey "Finds a key for a stored collection value" [bucket item] (keys (filter #(= item (read-string (val %))) (with-mc db-nodes (cgetmap bucket)))))
+(defn cgetmap "Reads full collection as map" [bucket] (let [nodes (cget bucket)] (.getBulk (find-connection) nodes)))
+(defn cgetall "Reads the full collection" [bucket] (map read-string (vals (cgetmap bucket))))
+(defn csize "Returns the size of a collection" [bucket] (count (cget bucket)))
+(defn cdeleteall "Removes from collection including head node" [bucket] (doseq [f (doall (map #(.delete (find-connection) %) (conj (cget bucket) bucket)))] (.get f)))
+(defn cdeleteitem [bucket item] (let [itemkey (first (cfindkey bucket item)) deleted (cdelete itemkey)] (creplace bucket (filter #(not= itemkey %) (cget bucket))))) 
+; Update = delete + append
 
 
