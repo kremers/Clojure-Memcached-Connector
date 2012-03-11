@@ -13,6 +13,7 @@
                  [org.slf4j/slf4j-api "1.6.4"]
                  [cheshire "2.0.4"]
                  [ch.qos.logback/logback-classic "1.0.0"]
+                 [stencil "0.2.0"]
                   ]  
    :main clojurestack.core
    :source-path "src"
