@@ -1,6 +1,7 @@
 (ns clojurestack.core
   (:import [java.io BufferedReader] [java.io InputStreamReader])
-  (:use [clojurestack.templates :as t] [clojurestack.memcache]
+;  (:require (clojurestack.domain))
+  (:use [clojurestack.memcache]
         [ring.middleware file file-info params reload]
         [clojure.tools.logging :only (info error)]
 	[net.cgrand.moustache :only [app]]
@@ -23,17 +24,16 @@
 ; To fix issues that appear for Jetty (not Netty) with UTF-8 responses
 (defn utf8response "Ring skeleton with headers." [body] {:status  200 :headers { "Content-Type" "text/html;charset=UTF-8" "Character-Encoding" "UTF-8"} :body body})
 
+
+
 (def routes
   (app
    (wrap-file "resources")
    (wrap-file-info)
    (wrap-params) 
    (wrap-reload '[clojurestack.templates])
-;   [""]        (fn [req] (utf8response (t/index (map :task (get-todos)))))
     [""]        (fn [req] (with-mc db-nodes (utf8response (render-file "main" (hash-map "todos" (get-todos))))))
-;    [""]        (fn [req] (utf8response "hello world!"))
     ["addtodo"] (fn [req] (with-mc db-nodes (utf8response (generate-string (save-todo-from-req req))))) 
-    ["change"]  (fn [req] (response (t/index {:message "We changed the message!"})))
     [&]	       make-404
   ) 
 )

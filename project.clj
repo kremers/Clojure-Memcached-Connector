@@ -6,7 +6,6 @@
 		 [ring "1.0.0"] 
 		 [clj-time "0.3.3"]
 		 [me.shenfeng/async-ring-adapter "1.0.0"]
-		 [me.shenfeng/enlive "1.2.0-SNAPSHOT"]
 		 [net.cgrand/moustache "1.1.0"]
 		 [spy/spymemcached "2.7.3"]
                  [org.clojure/tools.logging "0.2.3"]
