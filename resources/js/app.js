@@ -1,6 +1,25 @@
                 $(document).ready(function() {
-                $('#addtodo').submit(function() {return false;});
-                $('#saveTaskButton').click(function() {
+                
+		$('#name_txt').focus();
+		$('#name_txt').keydown(function(e) { /* 13 = return key */if( e.keyCode === 13) { $("#saveTaskButton").trigger('click'); }});
+
+		$('#addtodo').submit(function() {return false;});
+                
+	        $(".deleteicon").click(function() {
+			var content = JSON.stringify({id: this.id}, null, 2);
+			//alert("sending: "+content);
+			$.ajax({ type: 'POST', contentType: 'application/json', url: 'removetodo', data: content, processData: false, dataType: 'json',
+			       success: function(data) { if(data == true) location.reload(true); else alert("returns: "+data);}});
+		});	 
+		
+		$(".doneicon").click(function() {
+                        var content = JSON.stringify({id: this.id}, null, 2);
+                        //alert("sending: "+content);
+                        $.ajax({ type: 'POST', contentType: 'application/json', url: 'donetodo', data: content, processData: false, dataType: 'json',
+                               success: function(data) { if(data == true) location.reload(true); else alert("returns: "+data);}});
+                });
+
+		$('#saveTaskButton').click(function() {
                     //var content = JSON.stringify({name: encodeURIComponent($("#name_txt").val())}, null, 2);
                     var content = JSON.stringify({name: $("#name_txt").val()}, null, 2);
                     $.ajax({
@@ -8,7 +27,7 @@
                        contentType: 'application/json',
                        url: 'addtodo',
                        data: content,
-                       success: function(data) { $('#todolist').prepend('<li>'+data.task+'</li>');},
+                       success: function(data) { location.reload(true); },
                        error: ajaxFailed,
                        processData: false,
                        dataType: 'json'

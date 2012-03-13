@@ -55,7 +55,7 @@
     (into '{} (for [[k v] stats] [k (into '{} v)]))))
 
 ; Now add collection management functinality
-(defn uuid []  (.toString (UUID/randomUUID)) )
+(defn uuid []  (clojure.string/replace (.toString (java.util.UUID/randomUUID)) #"-" "") )
 
 (defn cadd
   "Adds an item to a collection, if the collection does not exist create and append. 
@@ -65,12 +65,13 @@
   (let [leafkey (str bucket "_" (uuid)) node (cset leafkey value)] (if-let [current (cget bucket)] (creplace bucket (conj current leafkey)) (cset bucket [leafkey])))
 )
 
-(defn cgetmap "Reads full collection as map" [bucket] (let [nodes (cget bucket)] (.getBulk (find-connection) nodes)))
-(defn cfindkey "Finds a key for a stored collection value" [bucket item] (keys (filter #(= item (read-string (val %))) (with-mc (find-connection) (cgetmap bucket)))))
-(defn cgetall "Reads the full collection" [bucket] (map read-string (vals (cgetmap bucket))))
+(defn cgetmap "Reads full collection as map" [bucket] (try (let [nodes (cget bucket)] (.getBulk (find-connection) nodes)) (catch NullPointerException e nil)) )
+(defn cgetkeys "Finds a key for a stored collection value" [bucket item] (keys (filter #(= item (read-string (val %))) (with-mc (find-connection) (cgetmap bucket)))))
+(defn cgetvals "Reads the full collection" [bucket] (map read-string (vals (cgetmap bucket))))
+(defn cgetall "key value map" [bucket] (let [i (cgetmap bucket)] (map (fn [x] {:key (key x) :value (read-string (val x))}) i )))
 (defn csize "Returns the size of a collection" [bucket] (count (cget bucket)))
 (defn cdeleteall "Removes from collection including head node" [bucket] (doseq [f (doall (map #(.delete (find-connection) %) (conj (cget bucket) bucket)))] (.get f)))
-(defn cdeleteitem [bucket item] (let [itemkey (first (cfindkey bucket item)) deleted (cdelete itemkey)] (creplace bucket (filter #(not= itemkey %) (cget bucket))))) 
-; Update = delete + append
+(defn cdeleteitem [bucket itemkey] (let [deleted (cdelete itemkey)] (creplace bucket (filter #(not= itemkey %) (cget bucket))))) 
 
+; Update = modify value only by key [bucket_key]
 
