@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>clojure todo example</title>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <script type="text/javascript" src="https://raw.github.com/douglascrockford/JSON-js/master/json2.js"></script>
+            <script type="text/javascript" src="js/app.js"></script>
+	    <style type="text/css">
+		    td.finishedtask {
+			    text-decoration:line-through;
+			    color:grey;
+		    }
+	    </style>
+    </head>
+    <body>
+	
+    <div id="todobox">
+        <h2>My Clojure todo example</h2>
+
+	<table id="todolist">
+	{{#todos}}
+	    <tr>
+		    <td {{#value.open}}class="opentask"{{/value.open}}{{^value.open}}class="finishedtask"{{/value.open}}>{{value.task}}</td>
+		    <td> {{value.created}} </td>
+		    <td>
+			    <img src="img/remove.png"  id="{{key}}" class="deleteicon" /> 
+			    <!-- <img src="img/edit.png" id="{{key}}" class="editicon" /> -->
+			    <img src="{{#value.open}}img/ok.png{{/value.open}}{{^value.open}}img/arrowrotate.png{{/value.open}}" id="{{key}}" class="doneicon" />
+		    </td>
+	    </tr>
+	{{/todos}}
+	</table>
+    </div>
+
+    <div id="addbox">
+      <form id="addtodo" action="addtodo" method="post">
+        <input id="name_txt" name="name" type="text" size="30" maxlength="200" />
+        <img id="saveTaskButton" src="http://www.feg-beeck.de/podcast/img/icon_diskette.gif" />
+      </form>
+    </div>
+
+<!--   <p id="message">
+    </body> -->
+</html>
